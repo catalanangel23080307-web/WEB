@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Videos</title>
+<style>
+    body {
+        background: #27B7F5;
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }
+
+    #videoContainer {
+        background: #d3c5ff;
+        padding: 2;
+        min-height: 30%;
+        margin-bottom: 1;
+    }
+
+    video {
+        width: 80%;
+    }
+	
+    button {
+        background: #6a5acd;
+        color: white;
+        border: 1 solid black;
+        cursor: pointer;
+    }
+</style>
+<script>
+function cargarVideo(archivo) {
+    document.getElementById("videoContainer").innerHTML =
+    '<video controls autoplay><source src="' + archivo + '" type="video/mp4"></video>';
+}
+
+function limpiar() {
+    document.getElementById("videoContainer").innerHTML = "";
+}
+</script>
+</head>
+<body>
+<h2>VIDEOS DE TESTIMONIOS E INFORMACION</h2>
+<div id="videoContainer"></div>
+<button onclick="cargarVideo('video/vid.mp4')">Video 1</button>
+<button onclick="cargarVideo('video/vid2.mp4')">Video 2</button>
+<button onclick="cargarVideo('video/vid3.mp4')">Video 3</button>
+<button onclick="limpiar()">Limpiar</button>
+</body>
+</html>
